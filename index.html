@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Time Alarm ⏰</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <!-- Header -->
+        <header class="app-header">
+            <span class="badge">kikisaja</span>
+            <h1>⏰ SIMPLE TIME ALARM</h1>
+            <p>Pengingat waktu istirahat & sholat dengan alarm Beep otomatis!</p>
+        </header>
+
+        <!-- Display Hitung Mundur -->
+        <div class="timer-display-box" id="timer-box">
+            <span class="timer-status-text" id="status-label">Siap Diatur</span>
+            <div class="timer-number" id="time-display">00:00</div>
+        </div>
+
+        <!-- Form & Preset Timer -->
+        <div class="control-section">
+            <div class="preset-buttons">
+                <button type="button" class="btn-preset" data-minutes="5">+5 Mnt</button>
+                <button type="button" class="btn-preset" data-minutes="10">+10 Mnt</button>
+                <button type="button" class="btn-preset" data-minutes="15">+15 Mnt</button>
+                <button type="button" class="btn-preset" data-minutes="30">+30 Mnt</button>
+            </div>
+
+            <div class="custom-input-group">
+                <label for="custom-minutes">Atur Menit Manual:</label>
+                <input type="number" id="custom-minutes" placeholder="Contoh: 25" min="1" max="180">
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-grid">
+                <button type="button" id="btn-start" class="btn-action start">▶️ MULAI</button>
+                <button type="button" id="btn-stop" class="btn-action stop" disabled>⏹️ STOP / RESET</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
